@@ -1,0 +1,12 @@
+@media only screen and (max-device-width: 320px){
+    body{
+        #command-line{
+            #message-text{
+                width: 100%;
+            }
+            .btn{
+                width: 100%;
+            }
+        }
+    }
+}

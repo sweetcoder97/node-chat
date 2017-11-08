@@ -1,18 +1,24 @@
 html {
   height: 100%; }
   html body {
-    font-size: 12px;
+    font-size: 16px;
     height: 100%; }
+    html body #user-list li {
+      font-size: 14px;
+      font-weight: bold;
+      list-style: none; }
     html body #message-panel {
       position: relative;
       min-height: 95%; }
+      html body #message-panel li {
+        list-style: none; }
       html body #message-panel li:nth-child(even) {
-        background-color: lightgrey; }
+        background-color: aliceblue; }
     html body #command-line {
       position: fixed;
       bottom: 0;
       width: 100%; }
       html body #command-line #message-text {
-        width: 90%; }
+        width: 100%; }
       html body #command-line .btn {
-        width: 10%; }
+        width: 100%; }

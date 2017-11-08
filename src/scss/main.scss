@@ -1,15 +1,22 @@
-$font-size: 12px;
-
 html{
     height: 100%;
     body{
-        font-size: $font-size;
-        height: 100%;
+        font-size: 16px;
+        height: 100%;        
+
+        #user-list{
+            li{
+                font-size: 14px;
+                font-weight: bold;
+                list-style: none;
+            }
+        }
+
         #message-panel{
             position: relative;
             min-height: 95%;
-            li:nth-child(even){
-                background-color: lightgrey;
+            li{
+                list-style: none;
             }
         }
         #command-line{
@@ -17,11 +24,15 @@ html{
             bottom: 0;
             width: 100%;
             #message-text{
-                width: 90%;
+                width: 100%;
             }
             .btn{
-                width: 10%;
+                width: 100%;
             }
         }
     }
 }
+
+// @import "large-devices";
+// @import "normal-devices";
+// @import "small-devices";
