@@ -11,6 +11,7 @@ app.use("/public", express.static("public"));
 routes(app);
 
 io.on("connection", (socket) => {
+    // Fonction de submission à les autres utilisateurs
     socket.on("chat message", (msg) => {
         socket.broadcast.emit("chat message", msg);
     });
