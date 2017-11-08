@@ -1,0 +1,18 @@
+html {
+  height: 100%; }
+  html body {
+    font-size: 12px;
+    height: 100%; }
+    html body #message-panel {
+      position: relative;
+      min-height: 95%; }
+      html body #message-panel li:nth-child(even) {
+        background-color: lightgrey; }
+    html body #command-line {
+      position: fixed;
+      bottom: 0;
+      width: 100%; }
+      html body #command-line #message-text {
+        width: 90%; }
+      html body #command-line .btn {
+        width: 10%; }

@@ -1,0 +1,27 @@
+$font-size: 12px;
+
+html{
+    height: 100%;
+    body{
+        font-size: $font-size;
+        height: 100%;
+        #message-panel{
+            position: relative;
+            min-height: 95%;
+            li:nth-child(even){
+                background-color: lightgrey;
+            }
+        }
+        #command-line{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            #message-text{
+                width: 90%;
+            }
+            .btn{
+                width: 10%;
+            }
+        }
+    }
+}
