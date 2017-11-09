@@ -18,7 +18,10 @@ io.on("connection", (socket) => {
 
     socket.on("chat message", (msg) => {
         // Envoyer des messages à les autres utilisateurs sauf le expéditeur
-        socket.broadcast.emit("chat message", msg);
+        var u = users.find((elem) => {
+            return (elem.id == socket.id) ? elem : false;
+        })
+        socket.broadcast.emit("chat message", u.nick + ": " + msg);
     });
 
     socket.on("set nick", (nickname) => {
@@ -27,6 +30,14 @@ io.on("connection", (socket) => {
                 elem.nick = nickname;
         });
         io.emit("chat message", "Nick alterado para " + nickname);
+        io.emit("users connected", users);
+    });
+
+    socket.on("disconnect", () => {
+        users = users.filter((elem) => {
+            return (elem.id !== socket.id) ? true : false;
+        });
+        io.emit("chat message", "Usuário desconectado");
         io.emit("users connected", users);
     });
 });

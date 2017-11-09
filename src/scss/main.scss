@@ -3,31 +3,37 @@ html{
     body{
         font-size: 16px;
         height: 100%;        
-
-        #user-list{
-            li{
-                font-size: 14px;
-                font-weight: bold;
-                list-style: none;
+        .container{
+            #user-list{
+                border-left: 1px solid blueviolet;
+                min-height: 90%;
+                li{
+                    font-size: 14px;
+                    font-weight: bold;
+                    list-style: none;
+                }
             }
-        }
-
-        #message-panel{
-            position: relative;
-            min-height: 95%;
-            li{
-                list-style: none;
+            #message-panel{
+                position: relative;
+                min-height: 90%;
+                li{
+                    list-style: none;
+                }
             }
-        }
-        #command-line{
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            #message-text{
-                width: 100%;
-            }
-            .btn{
-                width: 100%;
+            #command-line{
+                border-top: 1px solid blueviolet;
+                max-height: 6%;
+                padding-top: 2%;
+                input{
+                    width: 100%;
+                    line-height: 32px;
+                    font-size: 28px;
+                }
+                .btn{
+                    width: 100%;
+                    line-height: 32px;
+                    font-size: 28px;
+                }
             }
         }
     }

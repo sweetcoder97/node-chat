@@ -3,22 +3,27 @@ html {
   html body {
     font-size: 16px;
     height: 100%; }
-    html body #user-list li {
-      font-size: 14px;
-      font-weight: bold;
-      list-style: none; }
-    html body #message-panel {
-      position: relative;
-      min-height: 95%; }
-      html body #message-panel li {
+    html body .container #user-list {
+      border-left: 1px solid blueviolet;
+      min-height: 90%; }
+      html body .container #user-list li {
+        font-size: 14px;
+        font-weight: bold;
         list-style: none; }
-      html body #message-panel li:nth-child(even) {
-        background-color: aliceblue; }
-    html body #command-line {
-      position: fixed;
-      bottom: 0;
-      width: 100%; }
-      html body #command-line #message-text {
-        width: 100%; }
-      html body #command-line .btn {
-        width: 100%; }
+    html body .container #message-panel {
+      position: relative;
+      min-height: 90%; }
+      html body .container #message-panel li {
+        list-style: none; }
+    html body .container #command-line {
+      border-top: 1px solid blueviolet;
+      max-height: 6%;
+      padding-top: 2%; }
+      html body .container #command-line input {
+        width: 100%;
+        line-height: 32px;
+        font-size: 28px; }
+      html body .container #command-line .btn {
+        width: 100%;
+        line-height: 32px;
+        font-size: 28px; }
